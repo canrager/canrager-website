@@ -4,6 +4,10 @@
 
 // Typography
 
+body {
+  font-family: $body-font-family;
+}
+
 p,
 h1,
 h2,
@@ -199,13 +203,13 @@ ul.task-list input[type="checkbox"] {
   width: 100%;
 
   .more-info {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     margin-top: 5px;
-    font-family: monospace;
+    font-size: 1.2rem;
 
     p {
-      display: inline-block;
-      margin: 0;
+      display: block;
+      margin: 0 0 0 0;
     }
   }
 }
@@ -405,6 +409,7 @@ ul.task-list input[type="checkbox"] {
   border: 0;
   background-color: inherit;
   color: var(--global-text-color);
+  vertical-align: middle;
 
   &:hover {
     color: var(--global-hover-color);

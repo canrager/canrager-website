@@ -82,10 +82,8 @@ cv:
 footer:
   copyright: Copyright
   last_updated: "Last updated:"
-footer_text: > # the ">" symbol means to ignore newlines until "titles:"
+footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 latest_posts: latest posts
 months:
   long:
@@ -118,10 +116,11 @@ news: news
 newsletter:
   back: Back
   error: "Oops! Something went wrong, please try again."
-  subscribe: subscribe
+  placeholder: "Submit your email here."
+  subscribe: Join blog
   subscribed: "You have successfully subscribed to the newsletter."
   subscribe_to_receive: "Subscribe to be notified of future articles:"
-  too_many_signups: "Too many signups, please try again in a little while"
+  too_many_signups: "Too many signups, please try again in a little while."
   wait: "Please wait..."
 no_news: No news so far...
 no_posts: "No posts so far..."

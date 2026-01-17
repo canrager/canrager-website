@@ -1,7 +1,7 @@
 ---
 page_id: about
 layout: about
-title: about
+title: Über mich
 permalink: /
 
 profile:
@@ -28,10 +28,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Everyone uses AI, but nobody understands how it makes decisions. Not even the developers! I find this fascinating and alarming.
+Jeder nutzt KI, doch niemand versteht, wie sie Entscheidungen trifft. Nicht einmal die Entwickler! Das finde ich faszinierend und alarmierend.
 
-As an independent AI safety researcher, I study the internal mechanisms of artificial neural networks to improve control over AI systems and avoid failures. Alessandro Barp (UCL), Ekdeep Singh (Goodfire AI), and David Bau (Northeastern University) advise me.
+Als unabhängiger Forscher im Bereich KI Sicherheit untersuche ich die internen Mechanismen künstlicher neuronaler Netze, um die Kontrolle über KI Systeme zu verbessern und Fehler zu vermeiden. Alessandro Barp (UCL), Ekdeep Singh (Goodfire AI) und David Bau (Northeastern University) beraten mich.
 
-Previously, I was MATS scholar under Neel Nanda and a visiting researcher in David Bau's lab. I completed my Bachelor's in Physics with Hans J. Briegel at LFU Innsbruck and did internships at CERN, European XFEL, and the Santa Fe Institute.
+Zuvor war ich MATS-Stipendiat von Neel Nanda und Gastwissenschaftler in David Baus Labor. Meinen Bachelor in Physik habe ich bei Hans J. Briegel an der LFU Innsbruck abgeschlossen und Praktika am CERN, European XFEL und dem Santa Fe Institute absolviert.
 
-My whole family does exciting things: Esin promotes sustainability as founder of organic tea brand samova and former vice president of FC St Pauli. Stefan is a yoga teacher and musician at Deutsches Schauspielhaus. Sinan is a specialist for modern energy solutions at Enpal, Germany's leader for solar installations.
+Meine ganze Familie macht spannende Sachen: Esin fördert Nachhaltigkeit als Gründerin Bio-Teemarke samova und Ex-Vizepräsidentin des FC St Pauli. Stefan ist Yogalehrer und Musiker am Deutschen Schauspielhaus. Sinan ist Spezialist für moderne Energielösungen bei Enpal, Deutschlands Marktführer für Solaranlagen.

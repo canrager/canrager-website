@@ -18,6 +18,9 @@ $green-color-lime: #b7d12a !default;
 $green-color-dark: #009f06 !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
+// Custom theme colors for Can Rager's site
+$green-color-light-can: #ffe0ae !default;
+$green-color-dark-can: #3d6a2a !default;
 $purple-color: #b509ac !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
@@ -26,11 +29,15 @@ $yellow-color: #efcc00 !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
+$grey-color-dark: #1f1e1d;
 $grey-900: #212529;
 
-$white-color: #ffffff !default;
+$white-color: #f0eee6 !default;
 $black-color: #000000 !default;
+
+// Typography
+$body-font-family:"Palatino", "Palatino Linotype", "Book Antiqua", -apple-system,
+  system-ui, "Roboto", "Helvetica Neue", Arial, sans-serif !default;
 
 // Theme colors
 $code-bg-color-light: rgba($purple-color, 0.05);
