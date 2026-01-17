@@ -127,7 +127,7 @@ external_sources:
 
 newsletter:
   enabled: true
-  endpoint: https://app.loops.so/api/newsletter-form/cmkijp6sr3cfk0i2esne9jkr0 # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
+  endpoint: cmkijp6sr3cfk0i2esne9jkr0 # your loops form ID
   # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
