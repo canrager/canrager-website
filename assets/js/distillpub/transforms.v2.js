@@ -865,7 +865,11 @@
           .map((s) => s.trim()[0]);
         initials = initials.join(".") + ".";
       }
-      return template.replace("${F}", firsts).replace("${L}", last).replace("${I}", initials).trim(); // in case one of first or last was empty
+      // Handle case where author has no first name (e.g., "Statista")
+      if (firsts == undefined || firsts.trim() === "") {
+        return last;
+      }
+      return template.replace("${F}", firsts).replace("${L}", last).replace("${I}", initials).trim();
     });
     if (names.length > 1) {
       var str = name_strings.slice(0, names.length - 1).join(sep);
@@ -1026,11 +1030,20 @@
   // import style from '../styles/d-byline.css';
 
   function bylineTemplate(frontMatter) {
+    const hasAnyAffiliation = frontMatter.authors.some(
+      (author) => author.affiliations && author.affiliations.length > 0
+    );
+    const authorCount = frontMatter.authors.length;
+    const strings = frontMatter.strings || {};
+    const authorLabel = authorCount === 1
+      ? (strings.author || 'Author')
+      : (strings.authors || 'Authors');
+    const affiliationLabel = strings.affiliations || 'Affiliations';
     return `
   <div class="byline grid">
     <div class="authors-affiliations grid">
-      <h3>Authors</h3>
-      <h3>Affiliations</h3>
+      <h3>${authorLabel}</h3>
+      ${hasAnyAffiliation ? `<h3>${affiliationLabel}</h3>` : ""}
       ${frontMatter.authors
         .map(
           (author) => `
@@ -1043,7 +1056,7 @@
             <span class="name">${author.name}</span>`
           }
         </p>
-        <p class="affiliation">
+        ${hasAnyAffiliation ? `<p class="affiliation">
         ${author.affiliations
           .map((affiliation) =>
             affiliation.url
@@ -1051,7 +1064,7 @@
               : `<span class="affiliation">${affiliation.name}</span>`
           )
           .join(", ")}
-        </p>
+        </p>` : ""}
       `
         )
         .join("")}

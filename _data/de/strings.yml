@@ -27,6 +27,10 @@ collections:
   books: Bücher
   posts: Beiträge
 contact_note: Sie können hier auch einen kleinen Hinweis hinzufügen, wie man Sie am besten erreicht.
+distill:
+  author: Autor
+  authors: Autoren
+  affiliations: Institutionen
 cv:
   address: Adresse
   area: Bereich
@@ -81,9 +85,10 @@ cv:
   work: Beruf
 footer:
   copyright: Copyright
+  impressum: Impressum
   last_updated: "Zuletzt aktualisiert:"
 footer_text: >
-  Erstellt mit <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> und dem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a> Theme.
+  <a href="/de/blog/2026/website/">Wie diese Website entstanden ist</a>.
 latest_posts: neueste Beiträge
 months:
   long:

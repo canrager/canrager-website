@@ -24,13 +24,15 @@
               {% for author in page.authors %}
               {
                 "author": "{{ author.name }}",
-                "authorURL": "{{ author.url }}",
+                "authorURL": "{{ author.url }}"{% if author.affiliations %},
                 "affiliations": [
+                  {% for affiliation in author.affiliations %}
                   {
-                    "name": "{{ author.affiliations.name }}",
-                    "url": "{{ author.affiliations.url }}"
-                  }
-                ]
+                    "name": "{{ affiliation.name }}",
+                    "url": "{{ affiliation.url }}"
+                  }{% if forloop.last == false %},{% endif %}
+                  {% endfor %}
+                ]{% endif %}
               }{% if forloop.last == false %},{% endif %}
               {% endfor %}
             ],
@@ -47,6 +49,11 @@
                   "display": true
                 }
               ]
+            },
+            "strings": {
+              "author": "{{ site.data.strings.distill.author }}",
+              "authors": "{{ site.data.strings.distill.authors }}",
+              "affiliations": "{{ site.data.strings.distill.affiliations }}"
             }
           }
     </script>
@@ -62,6 +69,30 @@
         <h1>{{ page.title }}</h1>
         <p>{{ page.description }}</p>
       </d-title>
+      {% if page.header_image %}
+        <style>
+          .header-image-container {
+            max-width: {{ page.header_image_width_desktop | default: page.header_image_width | default: '100%' }};
+            margin: 0 auto;
+            {% if page.header_image_padding_bottom %}padding-bottom: {{ page.header_image_padding_bottom }};{% endif %}
+          }
+          @media (max-width: 768px) {
+            .header-image-container {
+              max-width: {{ page.header_image_width_mobile | default: page.header_image_width | default: '100%' }};
+            }
+          }
+        </style>
+        <div class="{{ page.header_image_class | default: 'l-body' }} header-image-container">
+          {% if page.header_image_shadow %}
+            {% include figure.liquid loading="eager" path=page.header_image class="img-fluid rounded z-depth-1" zoomable=page.header_image_zoomable %}
+          {% else %}
+            {% include figure.liquid loading="eager" path=page.header_image class="img-fluid rounded" zoomable=page.header_image_zoomable %}
+          {% endif %}
+        </div>
+        {% if page.header_image_caption %}
+          <p class="caption">{{ page.header_image_caption }}</p>
+        {% endif %}
+      {% endif %}
       {% if page.authors %}
         <d-byline></d-byline>
       {% endif %}

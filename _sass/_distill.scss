@@ -4,6 +4,15 @@
 
 d-byline {
   border-top-color: var(--global-divider-color) !important;
+
+  .byline {
+    grid-template-columns: auto auto auto 1fr !important;
+    gap: 3em;
+  }
+
+  .authors-affiliations {
+    grid-column-end: span 1 !important;
+  }
 }
 
 d-byline h3 {
@@ -150,7 +159,13 @@ d-article {
 }
 
 d-appendix {
-  border-top-color: var(--global-divider-color) !important;
+  // Default: no border (will be added back only when content exists)
+  border-top: none !important;
+
+  // Show border only when appendix has actual list content (footnotes or citations)
+  &:has(ol li) {
+    border-top: 1px solid var(--global-divider-color) !important;
+  }
   color: var(--global-distill-app-color) !important;
   h3,
   li,
@@ -182,4 +197,20 @@ d-appendix {
       }
     }
   }
+}
+
+// Remove border-top from d-article that follows d-bibliography to avoid double line
+d-bibliography + d-article,
+.post.distill d-bibliography + d-article,
+d-bibliography ~ d-article {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// Also hide d-appendix border when empty
+d-article + d-appendix:not(:has(h3)) {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }

@@ -3,8 +3,8 @@ page_id: blog
 layout: default
 permalink: /blog/
 title: Blog
-blog_name: Can's Blog
-description: Useful tech and AI interpretability
+blog_name: Cans Blog
+description: Nützliche Technik und KI Interpretierbarkeit
 nav: true
 nav_order: 1
 pagination:
