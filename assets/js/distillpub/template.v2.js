@@ -101,6 +101,7 @@
     target.authors = source.authors.map((authorObject) => new Author(authorObject));
     target.katex = source.katex;
     target.password = source.password;
+    target.strings = source.strings || {};
     if (source.doi) {
       target.doi = source.doi;
     }
@@ -1192,6 +1193,7 @@ ${math}
             return [citationKey, frontMatter.bibliography.get(citationKey)];
           })
         );
+        citationListTag.strings = frontMatter.strings || {};
         citationListTag.citations = bibliographyEntries;
 
         const citeTags = document.querySelectorAll("d-cite");
@@ -1239,6 +1241,7 @@ ${math}
               return [citationKey, frontMatter.bibliography.get(citationKey)];
             })
           );
+          citationListTag.strings = frontMatter.strings || {};
           citationListTag.citations = entries;
         }
       },
@@ -2124,13 +2127,13 @@ d-appendix > distill-appendix {
       </div>` : ""}
     </div>
     <div>
-      <h3>Published</h3>
+      <h3>${strings.published || 'Published'}</h3>
       ${
         frontMatter.publishedDate
           ? `
         <p>${frontMatter.publishedMonth} ${frontMatter.publishedDay}, ${frontMatter.publishedYear}</p> `
           : `
-        <p><em>Not published yet.</em></p>`
+        <p><em>${strings.not_published || 'Not published yet.'}</em></p>`
       }
     </div>
   </div>
@@ -2324,7 +2327,7 @@ d-citation-list .references .title {
 }
 `;
 
-  function renderCitationList(element, entries, dom = document) {
+  function renderCitationList(element, entries, strings = {}, dom = document) {
     if (entries.size > 0) {
       element.style.display = "";
       let list = element.querySelector(".references");
@@ -2337,7 +2340,7 @@ d-citation-list .references .title {
 
         const heading = dom.createElement("h3");
         heading.id = "references";
-        heading.textContent = "References";
+        heading.textContent = strings.references || "References";
         element.appendChild(heading);
 
         list = dom.createElement("ol");
@@ -2368,8 +2371,16 @@ d-citation-list .references .title {
       }
     }
 
+    set strings(strings) {
+      this._strings = strings;
+    }
+
+    get strings() {
+      return this._strings || {};
+    }
+
     set citations(citations) {
-      renderCitationList(this, citations);
+      renderCitationList(this, citations, this.strings);
     }
   }
 

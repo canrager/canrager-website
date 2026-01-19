@@ -31,6 +31,10 @@ distill:
   author: Autor
   authors: Autoren
   affiliations: Institutionen
+  published: Datum
+  not_published: Noch nicht veröffentlicht.
+  references: Referenzen
+  contents: Inhalt
 cv:
   address: Adresse
   area: Bereich
