@@ -2,7 +2,7 @@
 layout: distill
 title: The Need for AI Transparency
 description: Discovering topics that language models refuse to talk about.
-header_image: assets/img/refusal_small.png
+header_image: assets/img/refusal_title.png
 header_image_class: l-body
 header_image_width_desktop: 60%
 header_image_width_mobile: 90%
@@ -67,5 +67,6 @@ Our Iterated Prefill Crawler lists a range of topics that an AI system refuses t
 
 In another striking example, Crowdstrike researchers find that censored models are up to 50% more likely to introduce severe security vulnerabilities, whenever a sensitive subject is mentioned in context.<d-cite key="crowdstrike2025aivulnerabilities"></d-cite> Users need to be aware of censorship, as it can lead to unexpected failures.
 
-For more details, check out <a href="https://forbidden.baulab.info">the official project page</a>. Our work is featured on the news: Volkskrant<d-cite key="volkskrant2026qwen"></d-cite>, Khoury News<d-cite key="khoury2026qwen"></d-cite>, China Media Project<d-cite key="chinamediaproject2026qwen"></d-cite>.
+Our work is featured on the news: Volkskrant<d-cite key="volkskrant2026qwen"></d-cite>, Khoury News<d-cite key="khoury2026qwen"></d-cite>, China Media Project<d-cite key="chinamediaproject2026qwen"></d-cite>.
+For more details, check out <a href="https://forbidden.baulab.info">the official project page</a>. 
 

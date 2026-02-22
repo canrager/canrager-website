@@ -2,7 +2,7 @@
 layout: distill
 title: Analyse von KI-Transparenz
 description: Über die Ermittlung von Themen, die von Sprachmodellen strikt vermieden werden.
-header_image: assets/img/refusal_small.png
+header_image: assets/img/refusal_title.png
 header_image_class: l-body
 header_image_width_desktop: 60%
 header_image_width_mobile: 90%
@@ -71,6 +71,5 @@ Wir haben beispielsweise historische Themen identifiziert, die das Qwen3-Modell 
 Crowdstrike-Forscher stellten fest, dass zensierte Modelle mit bis zu 50% höherer Wahrscheinlichkeit schwerwiegende Sicherheitslücken einführen, sobald ein sensibles Thema im Kontext erwähnt wird.<d-cite key="crowdstrike2025aivulnerabilities"></d-cite>
 Dieses Ergebnis unterstreicht, dass Nutzer sich einer Zensur bewusst sein müssen, da sie zu unerwarteten Fehlern führen kann.
 
-Weitere Details gibt es auf <a href="https://forbidden.baulab.info">unserer offiziellen Projektseite</a>. 
 Unsere Arbeit wurde in den Medien vorgestellt: Volkskrant<d-cite key="volkskrant2026qwen"></d-cite>, Khoury News<d-cite key="khoury2026qwen"></d-cite>, China Media Project<d-cite key="chinamediaproject2026qwen"></d-cite>.
-
+Weitere Details gibt es auf <a href="https://forbidden.baulab.info">unserer offiziellen Projektseite</a>. 
