@@ -9,7 +9,7 @@ profile:
   image: can_headshot.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p><a href="mailto:canrager-web@proton.me"><i class="fa-solid fa-envelope"></i> canrager-web@proton.me</a></p>
+    <p><a href="mailto:contact@canrager.com"><i class="fa-solid fa-envelope"></i> contact@canrager.com</a></p>
     <p><a href='https://scholar.google.com/citations?user=dzbnS2UAAAAJ&hl=en'>
       <i class="ai ai-google-scholar-square"></i> Scholar</a></p>
     <p><a href='https://linkedin.com/in/canrager'><i class="fab fa-linkedin"></i> LinkedIn</a></p>
